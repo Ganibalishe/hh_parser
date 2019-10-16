@@ -12,8 +12,7 @@ base_url = 'https://hh.ru/search/vacancy?L_is_autosearch=false&area=1&clusters=t
 
 def hh_parse(base_url, headers):
     jobs = []
-    urls = []
-    urls.append(base_url)
+    urls = [base_url]
     session = requests.Session()
     request = session.get(base_url, headers=headers)
     if request.status_code == 200:
@@ -67,4 +66,3 @@ def files_writer(jobs):
 
 jobs = hh_parse(base_url, headers)
 files_writer(jobs)
-
