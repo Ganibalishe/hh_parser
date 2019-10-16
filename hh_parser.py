@@ -47,8 +47,6 @@ def hh_parse(base_url, headers):
                 })
             except:
                 pass
-
-        print(len(jobs))
         finish = time.time() - start
     else:
         print('Status code = ' + str(request.status_code))
