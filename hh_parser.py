@@ -48,6 +48,7 @@ def hh_parse(base_url, headers):
                 })
             except:
                 pass
+
         print(len(jobs))
         finish = time.time() - start
     else:
